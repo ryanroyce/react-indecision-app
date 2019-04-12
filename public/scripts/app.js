@@ -4,6 +4,7 @@ console.log("app.js is running");
 // let appRoot = document.getElementById("app");
 // ReactDOM.render(template, appRoot);
 
-var template = React.createElement("p", null, "This is JSX from app.js");
+var template = React.createElement("h1", {id:"some-id"}, "This is JSX from app.js");
+
 var appRoot = document.getElementById("app");
 ReactDOM.render(template, appRoot);

@@ -1,0 +1,8 @@
+{
+  "name": "react-indecision-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ryanroyce/react-indecision-app.git",
+  "author": "dissonance <ryanminor01u@yahoo.com>",
+  "license": "MIT"
+}
