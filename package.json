@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/ryanroyce/react-indecision-app.git",
   "author": "dissonance <ryanminor01u@yahoo.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  }
 }
