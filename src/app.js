@@ -5,21 +5,27 @@ let template = (
         <h1>Indecision App</h1>
         <p>Blah Blah Blah</p>
         <ol>
-        <li>Thing one</li>
-        <li>Thing two</li>
+            <li>Thing one</li>
+            <li>Thing two</li>
         </ol>
     </div>
-    );
+);
 
-let userName = "Ryan Minor";
-let userAge = 30; 
-let userLocation = "San Diego";
+let user = {
+    name: "Ryan",
+    age: 30,
+    location: "San Diego"
+};
+
+// let userName = "Ryan Minor";
+// let userAge = 30;
+// let userLocation = "San Diego";
 
 let templateTwo = (
     <div>
-    <h1>{userName.toUpperCase()}</h1>
-    <p>Age: {userAge}</p>
-    <p>Location: {userLocation}</p>
+        <h1>{user.name.toUpperCase()}</h1>
+        <p>Age: {user.age}</p>
+        <p>Location: {user.location}</p>
     </div>
 
 );
