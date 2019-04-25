@@ -2,18 +2,29 @@
 
 console.log("app.js is running!");
 
+var app = {
+    title: "Indecision App",
+    subtitle: "Never forget again",
+    options: ["One", "Two"]
+};
+
 var template = React.createElement(
     "div",
     null,
     React.createElement(
         "h1",
         null,
-        "Indecision App"
+        app.title
+    ),
+    app.subtitle && React.createElement(
+        "p",
+        null,
+        app.subtitle
     ),
     React.createElement(
         "p",
         null,
-        "Blah Blah Blah"
+        app.options.length > 0 ? "Here are you options: " : "No Options"
     ),
     React.createElement(
         "ol",
@@ -31,15 +42,38 @@ var template = React.createElement(
     )
 );
 
-var user = {
-    name: "Ryan",
-    age: 30,
-    location: "San Diego"
+// const user = {
+//     name: "Ryan",
+//     age: 30,
+//     location: "San Diego"
+// };
+
+// function getLocation(location1){
+//     if (location1) {
+//         return <p>Location: {location1}</p>
+//     } 
+// }
+// const templateTwo = (
+//     <div>
+//         <h1>{user.name ? user.name.toUpperCase() : 'Anonymous'}</h1>
+//         {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
+//         {getLocation(user.location)}
+//     </div>
+
+// );
+
+var count = 0;
+var addOne = function addOne() {
+    console.log("add one");
 };
 
-// let userName = "Ryan Minor";
-// let userAge = 30;
-// let userLocation = "San Diego";
+var minusOne = function minusOne() {
+    console.log("minus one");
+};
+
+var reset = function reset() {
+    console.log("reset");
+};
 
 var templateTwo = React.createElement(
     "div",
@@ -47,19 +81,23 @@ var templateTwo = React.createElement(
     React.createElement(
         "h1",
         null,
-        user.name.toUpperCase()
+        "Count: ",
+        count
     ),
     React.createElement(
-        "p",
-        null,
-        "Age: ",
-        user.age
+        "button",
+        { onClick: addOne, className: "button" },
+        "+1"
     ),
     React.createElement(
-        "p",
-        null,
-        "Location: ",
-        user.location
+        "button",
+        { onClick: minusOne, className: "button" },
+        "-1"
+    ),
+    React.createElement(
+        "button",
+        { onClick: reset, className: "button" },
+        "Reset"
     )
 );
 
